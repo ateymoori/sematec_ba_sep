@@ -20,14 +20,15 @@
 
     <Button
         android:layout_width="120dp"
-        android:background="@drawable/material"
         android:layout_height="48dp"
         android:layout_gravity="start"
-        android:textColor="#fff"
+        android:background="@drawable/material"
         android:gravity="end"
-        android:text="Save" />
+        android:text="Save"
+        android:textColor="#fff" />
 
     <Button
+        android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Size Practice 77777777777777\nsdcsdc\nsdcsdc" />
@@ -80,10 +81,14 @@
         android:inputType="number" />
 
     <ImageView
-        android:src="@drawable/material"
         android:layout_width="100dp"
+        android:layout_height="100dp"
         android:scaleType="centerCrop"
-        android:layout_height="100dp" />
+        android:src="@drawable/material" />
 
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

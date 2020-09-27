@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Sematec Basic</string>
 
-    <string name="register_form">Register Form</string>
+    <string name="register_form">فرم ثبت نام</string>
     <string name="enter_your_name">Enter your name</string>
     <string name="name_invalid">Name Family is invalid</string>
 
