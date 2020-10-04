@@ -1,94 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/drawer"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".activities.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00BCD4"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:layout_width="120dp"
-        android:layout_height="48dp"
-        android:layout_gravity="start"
-        android:background="@drawable/material"
-        android:gravity="end"
-        android:text="Save"
-        android:textColor="#fff" />
-
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Size Practice 77777777777777\nsdcsdc\nsdcsdc" />
-
-    <Button
-        android:layout_width="120dp"
-        android:layout_height="48dp"
-        android:background="#9C27B0"
-        android:text="fixed sizeuhuihhhhihihjgjgjjj" />
-
-
-    <Button
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="match parent"
-        android:textSize="20sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Iran Tehran"
-        android:textColor="#EC4510"
-        android:textSize="36sp" />
+        android:layout_height="match_parent">
 
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="#FF9800" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00BCD4"
+            android:text="Hello World!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:hint="Enter your name"
-        android:lines="1"
-        android:maxEms="10"
-        android:maxLength="10"
-        android:maxLines="1" />
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:layout_gravity="start"
+            android:background="@drawable/material"
+            android:gravity="end"
+            android:text="Save"
+            android:textColor="#fff" />
 
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:hint="Enter your password"
-        android:inputType="textPassword" />
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Size Practice 77777777777777\nsdcsdc\nsdcsdc" />
 
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:hint="Enter your number"
-        android:inputType="number" />
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:background="#9C27B0"
+            android:text="fixed sizeuhuihhhhihihjgjgjjj" />
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/material" />
 
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="match parent"
+            android:id="@+id/open"
+            android:textSize="20sp" />
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Iran Tehran"
+            android:textColor="#EC4510"
+            android:textSize="36sp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#FF9800" />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter your name"
+            android:lines="1"
+            android:maxEms="10"
+            android:maxLength="10"
+            android:maxLines="1" />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter your password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter your number"
+            android:inputType="number" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/material" />
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:background="#fff"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"  >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="match parent"
+            android:id="@+id/close"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -5,27 +5,35 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".utils.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
+        android:supportsRtl="false"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.SharedPrefActivity">
+        <activity android:name=".ImageSearchEngineActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.ImageViewerActivity">
+        <activity
+            android:name=".activities.NavigationDrawerActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         </activity>
+        <activity android:name=".activities.ListViewActivity"></activity>
+        <activity android:name=".activities.SharedPrefActivity" />
+        <activity android:name=".activities.ImageViewerActivity" />
         <activity android:name=".activities.DestinationActivity" />
-        <activity android:name=".activities.ClickEventsActivity"></activity>
+        <activity android:name=".activities.ClickEventsActivity" />
         <activity android:name=".activities.RelativeLayoutActivity" />
         <activity android:name=".activities.MyTestJavaActivity" />
-        <activity android:name=".activities.MainActivity" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>

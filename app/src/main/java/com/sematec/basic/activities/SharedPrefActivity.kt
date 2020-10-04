@@ -6,6 +6,7 @@ import android.preference.PreferenceManager
 import com.orhanobut.hawk.Hawk
 import com.sematec.basic.R
 import com.sematec.basic.utils.AppUtils
+import com.sematec.basic.utils.MyApplication
 import kotlinx.android.synthetic.main.activity_shared_pref.*
 
 class SharedPrefActivity : AppCompatActivity() {
@@ -13,7 +14,10 @@ class SharedPrefActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shared_pref)
 
-        Hawk.init(this).build()
+        //MyApplication.userNameFamily
+
+
+//        Hawk.init(this).build()
 
 //        name_family.setText(getPref("name"))
 //        mobile.setText(getPref("mobile"))
