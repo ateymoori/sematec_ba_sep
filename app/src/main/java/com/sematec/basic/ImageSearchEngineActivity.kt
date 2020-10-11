@@ -1,13 +1,15 @@
 package com.sematec.basic
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
 import com.loopj.android.http.AsyncHttpClient
 import com.loopj.android.http.TextHttpResponseHandler
 import com.sematec.basic.adapters.PixabayAdapter
 import com.sematec.basic.entities.HitsEntity
 import com.sematec.basic.entities.PixabayEntity
+import com.sematec.basic.mvp.Contract
 import com.sematec.basic.utils.log
 import com.sematec.basic.utils.toast
 import cz.msebera.android.httpclient.Header
@@ -17,13 +19,22 @@ class ImageSearchEngineActivity : AppCompatActivity() {
 
     val url = "https://pixabay.com/api/?key=14649220-5ae78e4612f86b869152790a4&q="
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_image_search_engine)
 
+
+
         search.setOnClickListener {
             searchImage(word.text.toString())
         }
+
+
+        refreshLayout.setOnRefreshListener {
+            searchImage(word.text.toString())
+        }
+
     }
 
     private fun searchImage(word: String) {
@@ -34,6 +45,16 @@ class ImageSearchEngineActivity : AppCompatActivity() {
 
 
         client.get(restURL, object : TextHttpResponseHandler() {
+
+            override fun onStart() {
+                super.onStart()
+                refreshLayout.isRefreshing = true
+            }
+
+            override fun onProgress(bytesWritten: Long, totalSize: Long) {
+                super.onProgress(bytesWritten, totalSize)
+            }
+
             override fun onSuccess(
                 statusCode: Int,
                 headers: Array<out Header>?,
@@ -52,7 +73,14 @@ class ImageSearchEngineActivity : AppCompatActivity() {
 
             }
 
+            override fun onFinish() {
+                super.onFinish()
+                refreshLayout.isRefreshing = false
+            }
+
+
         })
+
 
     }
 
@@ -75,4 +103,5 @@ class ImageSearchEngineActivity : AppCompatActivity() {
         }
 
     }
+
 }

@@ -3,11 +3,13 @@ package com.sematec.basic.utils
 import android.app.Application
 import android.content.Context
 import com.orhanobut.hawk.Hawk
+import com.sematec.basic.BuildConfig
+import timber.log.Timber
+
 
 class MyApplication : Application() {
 
     companion object {
-        lateinit var userNameFamily: String
         lateinit var context : Context
     }
 
@@ -15,7 +17,11 @@ class MyApplication : Application() {
         super.onCreate()
         Hawk.init(this).build()
         context = this
-        userNameFamily = "AmirHossein Teymoori"
+
+        if( BuildConfig.DEBUG){
+            Timber.plant(Timber.DebugTree())
+        }
+
     }
 
 

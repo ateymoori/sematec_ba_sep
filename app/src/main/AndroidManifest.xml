@@ -11,20 +11,27 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
-        android:theme="@style/AppTheme">
-        <activity android:name=".ImageSearchEngineActivity">
+        android:theme="@style/AppTheme"
+
+        android:usesCleartextTraffic="true"
+
+        >
+        <activity android:name=".login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activities.NavigationDrawerActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".mvp.MVPActivity">
 
         </activity>
-        <activity android:name=".activities.ListViewActivity"></activity>
+        <activity android:name=".activities.LotteAnimationActivity"></activity>
+        <activity android:name=".ImageSearchEngineActivity" />
+        <activity
+            android:name=".activities.NavigationDrawerActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".activities.ListViewActivity" />
         <activity android:name=".activities.SharedPrefActivity" />
         <activity android:name=".activities.ImageViewerActivity" />
         <activity android:name=".activities.DestinationActivity" />

@@ -8,6 +8,7 @@ import com.bumptech.glide.Glide
 import com.sematec.basic.BuildConfig
 import com.sematec.basic.R
 import kotlinx.android.synthetic.main.activity_image_viewer.*
+import timber.log.Timber
 
 
 fun ImageView.load(ctx: Context, url: String) {
@@ -31,6 +32,7 @@ fun ImageView.load(ctx: Context, file:Int) {
 fun String.log(tag: String = "sematec_debug") {
     if(BuildConfig.DEBUG){
         Log.d(tag, this)
+        //Timber.d(this)
     }
 }
 
