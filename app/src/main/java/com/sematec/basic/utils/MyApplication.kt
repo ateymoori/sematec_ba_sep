@@ -10,7 +10,7 @@ import timber.log.Timber
 class MyApplication : Application() {
 
     companion object {
-        lateinit var context : Context
+        lateinit var context: Context
     }
 
     override fun onCreate() {
@@ -18,19 +18,19 @@ class MyApplication : Application() {
         Hawk.init(this).build()
         context = this
 
-        if( BuildConfig.DEBUG){
+        if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
         }
 
-    }
+}
 
 
-    override fun onLowMemory() {
-        super.onLowMemory()
-    }
+override fun onLowMemory() {
+    super.onLowMemory()
+}
 
-    override fun onTerminate() {
-        super.onTerminate()
-    }
+override fun onTerminate() {
+    super.onTerminate()
+}
 
 }

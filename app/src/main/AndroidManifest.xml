@@ -12,21 +12,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/AppTheme"
-
-        android:usesCleartextTraffic="true"
-
-        >
-        <activity android:name=".login.LoginActivity">
+        android:usesCleartextTraffic="true">
+        <activity android:name=".add_edit.DestinationActivity"></activity>
+        <activity android:name=".add_edit.OriginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".mvp.MVPActivity">
 
         </activity>
-        <activity android:name=".activities.LotteAnimationActivity"></activity>
+        <activity android:name=".recyclerview.RecyclerViewActivity">
+
+        </activity>
+        <activity android:name=".handler.SplashScreenActivity" />
+        <activity android:name=".handler.HandlerActivity" />
+        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".mvp.MVPActivity" />
+        <activity android:name=".activities.LotteAnimationActivity" />
         <activity android:name=".ImageSearchEngineActivity" />
         <activity
             android:name=".activities.NavigationDrawerActivity"

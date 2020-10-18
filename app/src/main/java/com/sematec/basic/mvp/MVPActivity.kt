@@ -1,9 +1,11 @@
 package com.sematec.basic.mvp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import com.sematec.basic.R
+import com.sematec.basic.activities.MainActivity
 import com.sematec.basic.adapters.PixabayAdapter
 import com.sematec.basic.entities.HitsEntity
 import com.sematec.basic.utils.toast
@@ -22,25 +24,24 @@ class MVPActivity : AppCompatActivity(), Contract.View {
         search.setOnClickListener {
             presenter.search(word.text.toString())
         }
-
     }
 
     override fun onResults(result: MutableList<HitsEntity>) {
         //runOnUiThread {
-            val adapter = PixabayAdapter(this, result)
-            results.adapter = adapter
-       // }
+        val adapter = PixabayAdapter(this, result)
+        results.adapter = adapter
+        // }
     }
 
     override fun onError(msg: String?) {
         //runOnUiThread {
-            msg?.toast()
-       // }
+        msg?.toast()
+        // }
     }
 
     override fun onLoading(show: Boolean) {
-      //  runOnUiThread {
-            refreshLayout.isRefreshing = show
-       // }
+        //  runOnUiThread {
+        refreshLayout.isRefreshing = show
+        // }
     }
 }

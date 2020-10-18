@@ -19,6 +19,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class MVPPresenter(val view: Contract.View) : Contract.Presenter {
 
+
     //as presenter and model layer
     val url = "https://pixabay.com/api/?key=14649220-5ae78e4612f86b869152790a4&q="
 
@@ -26,6 +27,7 @@ class MVPPresenter(val view: Contract.View) : Contract.Presenter {
     override fun search(word: String) {
         //  searchImage(word)
         searchByRetrofit(word)
+
     }
 
 

@@ -15,5 +15,8 @@ interface Contract {
 
     }
 
+    interface Model{
+        fun getName():String
+    }
 
 }

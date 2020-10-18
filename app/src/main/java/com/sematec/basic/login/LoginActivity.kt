@@ -3,6 +3,8 @@ package com.sematec.basic.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import com.sematec.basic.ImageSearchEngineActivity
 import com.sematec.basic.R
 import com.sematec.basic.entities.UserEnity

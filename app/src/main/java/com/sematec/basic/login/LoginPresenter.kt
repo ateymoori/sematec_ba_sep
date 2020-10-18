@@ -3,10 +3,8 @@ package com.sematec.basic.login
 import com.sematec.basic.api.WebService
 import com.sematec.basic.entities.LoginRequestEntity
 import com.sematec.basic.utils.AppUtils
-import org.jetbrains.annotations.Contract
 
 class LoginPresenter(val view: LoginContract.View) : LoginContract.Presenter {
-
 
     override fun login(username: String, password: String) {
         Thread {
