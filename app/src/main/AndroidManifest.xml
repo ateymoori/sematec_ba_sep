@@ -13,18 +13,22 @@
         android:supportsRtl="false"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".add_edit.DestinationActivity"></activity>
-        <activity android:name=".add_edit.OriginActivity">
+        <activity android:name=".menu.MenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".video_player.VideoPlayerActivity">
 
         </activity>
-        <activity android:name=".recyclerview.RecyclerViewActivity">
-
-        </activity>
+        <activity android:name=".shape.ShapeActivity"></activity>
+        <activity android:name=".room_practice.BookListActivity" />
+        <activity android:name=".countries.CountryListActivity" />
+        <activity android:name=".add_edit.DestinationActivity" />
+        <activity android:name=".add_edit.OriginActivity" />
+        <activity android:name=".recyclerview.RecyclerViewActivity" />
         <activity android:name=".handler.SplashScreenActivity" />
         <activity android:name=".handler.HandlerActivity" />
         <activity android:name=".login.LoginActivity" />

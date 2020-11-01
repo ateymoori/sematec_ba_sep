@@ -1,5 +1,6 @@
 package com.sematec.basic.api
 
+import com.sematec.basic.countries.CountryEntity
 import com.sematec.basic.entities.LoginRequestEntity
 import com.sematec.basic.entities.PixabayEntity
 import com.sematec.basic.entities.UserEnity
@@ -35,6 +36,10 @@ interface Api {
     fun getVehicles(
         @Header("Authorization") token: String
     ): Call<List<VehicleEntity>>
+
+
+    @GET("https://run.mocky.io/v3/e659a514-6a5a-43b1-bbd8-9332b940ed60")
+    fun getCountries( ): Call<List<CountryEntity>>
 
 
 }

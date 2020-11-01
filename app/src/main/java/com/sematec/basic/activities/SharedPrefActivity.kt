@@ -56,6 +56,7 @@ class SharedPrefActivity : AppCompatActivity() {
         Hawk.put(key, value)
     }
 
+
     fun getByHawk(key: String): String? {
         return Hawk.get(key)
     }

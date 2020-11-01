@@ -21,6 +21,15 @@ class AppUtils {
 
         fun getData(key: String) = Hawk.get<String>(key)
 
+
+        fun getNumberByHawk(key: String ):Int  {
+            return Hawk.get(key, 0 )
+        }
+        fun saveNumberInHawk(key: String, value: Int) {
+            Hawk.put(key, value)
+        }
+
+
     }
 
 

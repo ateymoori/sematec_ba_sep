@@ -22,5 +22,4 @@
         android:layout_marginTop="@dimen/_12sdp"
         android:text="Add" />
 
-
 </LinearLayout>
