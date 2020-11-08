@@ -4,5 +4,7 @@
     <string name="register_form">Register Form</string>
     <string name="enter_your_name">Enter your name</string>
     <string name="name_invalid">Name Family is invalid</string>
+    <string name="enter_url">Enter URL</string>
+    <string name="go">Go</string>
 
 </resources>

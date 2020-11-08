@@ -1,6 +1,7 @@
 package com.sematec.basic.utils
 
 import android.content.Context
+import android.graphics.Bitmap
 import android.util.Log
 import android.widget.ImageView
 import android.widget.Toast
@@ -9,6 +10,7 @@ import com.sematec.basic.BuildConfig
 import com.sematec.basic.R
 import kotlinx.android.synthetic.main.activity_image_viewer.*
 import timber.log.Timber
+import java.io.File
 
 
 fun ImageView.load(ctx: Context, url: String) {
@@ -19,7 +21,26 @@ fun ImageView.load(ctx: Context, url: String) {
         .placeholder(R.drawable.material)
         .into(this)
 }
-fun ImageView.load(ctx: Context, file:Int) {
+
+fun ImageView.load(ctx: Context, file: Int) {
+    Glide
+        .with(ctx)
+        .load(file)
+        .centerCrop()
+        .placeholder(R.drawable.material)
+        .into(this)
+}
+
+fun ImageView.load(ctx: Context, bitmap: Bitmap) {
+    Glide
+        .with(ctx)
+        .load(bitmap)
+        .centerCrop()
+        .placeholder(R.drawable.material)
+        .into(this)
+}
+
+fun ImageView.load(ctx: Context, file: File) {
     Glide
         .with(ctx)
         .load(file)
@@ -30,7 +51,7 @@ fun ImageView.load(ctx: Context, file:Int) {
 
 
 fun String.log(tag: String = "sematec_debug") {
-    if(BuildConfig.DEBUG){
+    if (BuildConfig.DEBUG) {
         Log.d(tag, this)
         //Timber.d(this)
     }
@@ -41,6 +62,6 @@ fun Int.log(tag: String = "sematec_debug") {
 }
 
 
-fun String.toast(){
-    Toast.makeText(MyApplication.context , this , Toast.LENGTH_LONG).show()
+fun String.toast() {
+    Toast.makeText(MyApplication.context, this, Toast.LENGTH_LONG).show()
 }
