@@ -24,7 +24,16 @@ class WebViewActivity : AppCompatActivity() {
         dialog = ProgressDialog(this)
         dialog.setTitle("Please wait")
         dialog.setCanceledOnTouchOutside(false)
+//ci cd
+        //Gitlab - Jenkinz - drone - Github Actions
 
+//            ./gradlew lint
+//            ./gradlew test
+//            ./gradlew assemble
+//            /upload apk to dropbox
+                //email tester
+                //upoad apk google play service
+            //email report to all
 
         webView.settings.javaScriptEnabled = true
 

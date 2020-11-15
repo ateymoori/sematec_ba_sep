@@ -19,34 +19,27 @@
         android:supportsRtl="false"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
-        <activity android:name=".activity_dialog.MyDialogActivity"
-            android:theme="@style/Theme.AppCompat.Light.Dialog"
-            >
-
+        <activity android:name=".service.MusicPlayByServiceActivity">
 
         </activity>
-
-
-        <activity android:name=".dialog.AlertDialogActivity">
-
-        </activity>
-        <activity android:name=".image_handle.UploadAvatarActivity">
+        <activity android:name=".profile_view.CustomViewPracticeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".drawer_fragment.DrawerFragmentActivity"></activity>
+        <activity android:name=".pager.MyViewPagerActivity" />
+        <activity android:name=".fragment_simple.SimpleFragmentUsageActivity" />
+        <activity
+            android:name=".activity_dialog.MyDialogActivity"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity android:name=".dialog.AlertDialogActivity" />
+        <activity android:name=".image_handle.UploadAvatarActivity" />
         <activity android:name=".web_view.WebViewActivity" />
         <activity android:name=".receiver.ReceiverVideoPlayerActivity" />
-        <activity android:name=".tint.SetTintOfIconsActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".tint.SetTintOfIconsActivity" />
         <activity android:name=".menu.MenuActivity" />
         <activity android:name=".video_player.VideoPlayerActivity" />
         <activity android:name=".shape.ShapeActivity" />
@@ -75,6 +68,9 @@
             android:name=".activities.MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
+        <service android:name=".service.MusicPlayerService"/>
+
+
         <receiver
             android:name=".receiver.OnBootCompletedReceiver"
             android:enabled="true"
@@ -83,6 +79,8 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+
+        <service android:name=".cv.DownloadService" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProfileView">
+        <attr name="userTitle" format="string" />
+        <attr name="city" format="string" />
+        <attr name="married" format="boolean"/>
+    </declare-styleable>
+
+
+</resources>

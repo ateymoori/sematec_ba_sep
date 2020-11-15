@@ -6,13 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".tint.SetTintOfIconsActivity">
 
+    <fragment
+        android:id="@+id/frag"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        class="com.sematec.basic.cv.FragmentA"/>
 
     <ImageView
-        app:tint="@color/md_green_500"
+        android:id="@+id/imageView2"
         android:layout_width="@dimen/_100sdp"
         android:layout_height="@dimen/_100sdp"
         android:src="@drawable/ic_music_cloud"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/md_green_500" />
 </androidx.constraintlayout.widget.ConstraintLayout>

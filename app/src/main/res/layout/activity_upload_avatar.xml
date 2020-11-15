@@ -8,7 +8,11 @@
     android:orientation="vertical"
     tools:context=".image_handle.UploadAvatarActivity">
 
-
+    <fragment
+        android:id="@+id/frag"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        class="com.sematec.basic.cv.FragmentA"/>
     <com.makeramen.roundedimageview.RoundedImageView
         android:layout_width="@dimen/_86sdp"
         android:layout_height="@dimen/_86sdp"

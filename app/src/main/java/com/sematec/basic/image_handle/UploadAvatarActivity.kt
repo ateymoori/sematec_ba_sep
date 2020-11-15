@@ -1,6 +1,7 @@
 package com.sematec.basic.image_handle
 
 import android.app.Activity
+import android.app.DownloadManager
 import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
@@ -14,6 +15,7 @@ import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.sematec.basic.R
+import com.sematec.basic.cv.DownloadService
 import com.sematec.basic.utils.*
 import id.zelory.compressor.Compressor
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -37,12 +39,18 @@ class UploadAvatarActivity : BaseActivity(isFullScreen = true) {
 
 
         openGallery.setOnClickListener {
-            getPermissions(ImageResourceType.GALLERY)
+            startService(Intent(this , DownloadService::class.java))
         }
-
         openCamera.setOnClickListener {
-            getPermissions(ImageResourceType.CAMERA)
+            stopService(Intent(this , DownloadService::class.java))
         }
+//        openGallery.setOnClickListener {
+//            getPermissions(ImageResourceType.GALLERY)
+//        }
+
+//        openCamera.setOnClickListener {
+//            getPermissions(ImageResourceType.CAMERA)
+//        }
 
     }
 

@@ -91,4 +91,8 @@ dependencies {
 
 
     implementation 'com.karumi:dexter:6.2.1'
+
+
+
+    implementation 'com.ogaclejapan.smarttablayout:library:2.0.0@aar'
 }
